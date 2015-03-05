@@ -1,0 +1,38 @@
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\AntonsNotepad.csprojResolveAssemblyReference.cache
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_notepad.resources
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\AntonsNotepad.csproj.GenerateResource.Cache
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\bin\Debug\AntonsNotepad.exe.config
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\bin\Debug\AntonsNotepad.exe
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\bin\Debug\AntonsNotepad.pdb
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\bin\Debug\AntonsNotepad.exe.CodeAnalysisLog.xml
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\bin\Debug\AntonsNotepad.exe.lastcodeanalysissucceeded
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\obj\Debug\AntonsNotepad.csprojResolveAssemblyReference.cache
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_notepad.resources
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\obj\Debug\AntonsNotepad.Properties.Resources.resources
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\obj\Debug\AntonsNotepad.csproj.GenerateResource.Cache
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\obj\Debug\AntonsNotepad.exe
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\WindowsFormsApplication1\obj\Debug\AntonsNotepad.pdb
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.exe.config
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.exe
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.pdb
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.exe
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.pdb
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.csprojResolveAssemblyReference.cache
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.csproj.GenerateResource.Cache
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\obj\Debug\NotepadForm.Form_notepad.resources
+C:\Users\Anton\Documents\Visual Studio 2013\Projects\AntonsNotepad\AntonsNotepad\obj\Debug\NotepadForm.Properties.Resources.resources
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.exe.config
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.exe
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.pdb
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.exe
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.pdb
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.csprojResolveAssemblyReference.cache
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\obj\Debug\NotepadForm.Form_notepad.resources
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\obj\Debug\NotepadForm.Properties.Resources.resources
+C:\Users\Anton\Documents\workspace\DVGB07\Lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.csproj.GenerateResource.Cache
