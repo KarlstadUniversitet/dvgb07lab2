@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs.cs" />
     <Compile Include="Notepad_File_Operator.cs" />
     <Compile Include="Form_notepad.cs">
       <SubType>Form</SubType>

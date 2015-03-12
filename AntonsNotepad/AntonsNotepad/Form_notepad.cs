@@ -45,7 +45,7 @@ namespace NotepadForm
 
         private void saveToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
-            nfo.saveFile(textbox_filecontent);
+            nfo.saveFile(this, textbox_filecontent);
         }
 
 

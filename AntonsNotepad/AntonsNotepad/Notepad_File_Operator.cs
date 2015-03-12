@@ -10,110 +10,102 @@ namespace NotepadForm
 {
     class Notepad_File_Operator
     {
-        public Notepad_File_Operator()
-        {
+        Boolean isFileOpen = false;
+        Dialogs dialog = new Dialogs();
+        /* INTERNAL FUNCTIONS */
 
-        }
-
-        Stream openFileStream;
-
+        /*
+         * First of the functions checks if a file is already being worked on in the notepad. If so
+         * the saveFileBeforeOpenNew() function is called. Next step the user is prompt to choose a 
+         * file to open. After that the text from file is applied in the notepad textarea and title is 
+         * changed based on filename. 
+         * IF ERROR: an message with exception is messaged to the user. 
+         * <returns></returns> */
         internal void openFile(Form form, TextBox textbox)
         {
-            if (openFileStream != null)
+            if (isFileOpen)
             {
-                saveFileBeforeOpenNew(textbox);
+                saveFileBeforeOpenNew(form, textbox);
             }
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = "c:\\Users";
-            openFileDialog.Filter = "txt files (*txt)|*.txt|All files(*.*)|*.*";
-            openFileDialog.FilterIndex = 0;
-            openFileDialog.RestoreDirectory = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                try
+                OpenFileDialog oFD = dialog.openDialog();
+                string filename = oFD.FileName;
+                Stream stream = oFD.OpenFile();
+                using (stream)
                 {
-                    if ((openFileStream = openFileDialog.OpenFile()) != null)
+                    StreamReader sr = new StreamReader(stream);
+                    using (sr)
                     {
-                        using (openFileStream)
-                        {
-                            StreamReader sr = new StreamReader(openFileStream);
-                            form.Text = System.IO.Path.GetFileName(openFileDialog.FileName);
-                            textbox.Text = sr.ReadToEnd();
-                            sr.Close();
-                        }
+                        form.Text = System.IO.Path.GetFileName(filename);
+                        textbox.Text = sr.ReadToEnd();
+                        sr.Close();
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                }
+                isFileOpen = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
             }
         }
 
         internal void newFile(Form form, TextBox textbox)
         {
-            if (openFileStream != null)
+            if (isFileOpen)
             {
-                saveFileBeforeOpenNew(textbox);
+                saveFileBeforeOpenNew(form, textbox);
             }
             form.Text = "doc.1";
             textbox.Text = "";
         }
 
-        internal void saveFileBeforeOpenNew(TextBox textbox)
+        internal void saveFileAs(Form form, TextBox textbox)
+        {
+            SaveFileDialog sFD = dialog.saveDialog(form);
+            try {
+                Stream stream = sFD.OpenFile();
+                if (stream != null)
+                {
+                    StreamWriter sw = new StreamWriter(stream);
+                    using (sw)
+                    {
+                        sw.Write(textbox.Text);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: could not cave file: " + ex.Message);
+            }
+        }
+
+        internal void saveFile(Form form, TextBox textbox)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(form.Text))
+                {
+                    sw.Write(textbox.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not save file: " + ex.Message);
+            }
+        }
+
+        /* PRIVATE FUNCTIONS */
+
+        private void saveFileBeforeOpenNew(Form form, TextBox textbox)
         {
             string MessageBoxText = "If you don't save file before opening a new all changed will be lost. Do you want to save file?";
             string caption = "Save file?";
             DialogResult dialogResult = MessageBox.Show(MessageBoxText, caption, MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                saveFile(textbox);
-                openFileStream.Close();
-                textbox.Text = "";
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                openFileStream.Close();
-                textbox.Text = "";
+                saveFile(form, textbox);
             }
         }
-
-        internal void saveFileAs(Form form, TextBox textbox)
-        {
-            Stream stream;
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.Filter = "txt files (*txt)|*.txt|All files (*.*)|*.*";
-            saveFileDialog.FilterIndex = 2;
-            saveFileDialog.FileName = form.Text;
-            saveFileDialog.RestoreDirectory = true;
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if ((stream = saveFileDialog.OpenFile()) != null)
-                {
-                    using (stream)
-                    {
-                        StreamWriter sw = new StreamWriter(stream);
-                        sw.Write(textbox.Text);
-                        sw.Close();
-                        stream.Close();
-                    }
-                }
-            }
-        }
-
-        internal void saveFile(TextBox textbox)
-        {
-            Stream stream = openFileStream;
-            if (stream != null)
-            {
-                StreamWriter sw = new StreamWriter(stream);
-                sw.Write(textbox);
-                sw.Close();
-            }
-        }
-
     }
 }
