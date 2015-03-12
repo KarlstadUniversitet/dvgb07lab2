@@ -23,7 +23,12 @@ namespace NotepadForm
 
         private void textbox_filecontent_TextChanged(object sender, EventArgs e)
         {
-
+            char lastChar = this.Text[this.Text.Length-1];
+            if (lastChar != '*')
+            {
+                this.Text += "*";
+                nfo.textChanged = true;
+            }
         }
 
         private void newToolStripMenuItem_Clicked(object sender, System.EventArgs e)
@@ -40,12 +45,25 @@ namespace NotepadForm
 
         private void saveAsToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
-            nfo.saveFileAs(this, textbox_filecontent);
+            if (nfo.isFileOpen)
+            {
+                nfo.saveFileAs(this, textbox_filecontent);
+            }
+            
         }
 
         private void saveToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
-            nfo.saveFile(this, textbox_filecontent);
+            if (nfo.isFileOpen)
+            {
+                nfo.saveFile(this, textbox_filecontent);
+            }
+        }
+
+
+        private void closeToolStripMenuItem_Clicked(object sender, System.EventArgs e)
+        {
+            nfo.closeFile(this, textbox_filecontent);
         }
 
 

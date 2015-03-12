@@ -10,8 +10,15 @@ namespace NotepadForm
 {
     class Notepad_File_Operator
     {
-        Boolean isFileOpen = false;
+        internal Boolean isFileOpen { get; set; }
+        String filePath;
         Dialogs dialog = new Dialogs();
+        internal Boolean textChanged { get; set; }
+
+        public Notepad_File_Operator()
+        {
+            textChanged = false;
+        }
         /* INTERNAL FUNCTIONS */
 
         /*
@@ -23,23 +30,28 @@ namespace NotepadForm
          * <returns></returns> */
         internal void openFile(Form form, TextBox textbox)
         {
-            if (isFileOpen)
+            if (isFileOpen && textChanged)
             {
-                saveFileBeforeOpenNew(form, textbox);
+                if (saveFileBeforeOpenNew(form, textbox) == "Cancel")
+                {   // Cancel was pressed
+                    return;
+                }
             }
             try
             {
                 OpenFileDialog oFD = dialog.openDialog();
-                string filename = oFD.FileName;
+                String filename = oFD.FileName;
+                FileInfo fInfo = new FileInfo(oFD.FileName);
+                filePath = fInfo.DirectoryName;
                 Stream stream = oFD.OpenFile();
                 using (stream)
                 {
                     StreamReader sr = new StreamReader(stream);
                     using (sr)
                     {
-                        form.Text = System.IO.Path.GetFileName(filename);
                         textbox.Text = sr.ReadToEnd();
-                        sr.Close();
+                        form.Text = System.IO.Path.GetFileName(filename);
+                        textChanged = false;
                     }
                 }
                 isFileOpen = true;
@@ -52,12 +64,16 @@ namespace NotepadForm
 
         internal void newFile(Form form, TextBox textbox)
         {
-            if (isFileOpen)
+            if (isFileOpen && textChanged)
             {
-                saveFileBeforeOpenNew(form, textbox);
+                if (saveFileBeforeOpenNew(form, textbox) == "Cancel")
+                {   // Cancel was pressed
+                    return;
+                }
             }
-            form.Text = "doc.1";
+            form.Text = "dok.1";
             textbox.Text = "";
+            isFileOpen = true;
         }
 
         internal void saveFileAs(Form form, TextBox textbox)
@@ -82,9 +98,14 @@ namespace NotepadForm
 
         internal void saveFile(Form form, TextBox textbox)
         {
+            String file = filePath + "\\" + form.Text;
+            if (form.Text[form.Text.Length - 1] == '*')
+            {
+                file = file.TrimEnd(file[file.Length - 1]);
+            }
             try
             {
-                using (StreamWriter sw = new StreamWriter(form.Text))
+                using (StreamWriter sw = new StreamWriter(file))
                 {
                     sw.Write(textbox.Text);
                 }
@@ -95,17 +116,39 @@ namespace NotepadForm
             }
         }
 
+        internal void closeFile(Form form, TextBox textbox)
+        {
+            if (isFileOpen && textChanged)
+            {
+                if (saveFileBeforeOpenNew(form, textbox) == "Cancel")
+                {   // Cancel was pressed
+                    return;
+                }
+            }
+            form.Text = "Antons Notepad";
+            textbox.Text = "";
+            isFileOpen = false;
+            filePath = "";
+        }
+
         /* PRIVATE FUNCTIONS */
 
-        private void saveFileBeforeOpenNew(Form form, TextBox textbox)
+        private String saveFileBeforeOpenNew(Form form, TextBox textbox)
         {
-            string MessageBoxText = "If you don't save file before opening a new all changed will be lost. Do you want to save file?";
-            string caption = "Save file?";
-            DialogResult dialogResult = MessageBox.Show(MessageBoxText, caption, MessageBoxButtons.YesNo);
+            DialogResult dialogResult = dialog.saveBeforeNewDialog();
             if (dialogResult == DialogResult.Yes)
             {
                 saveFile(form, textbox);
+                return "Yes";
             }
+            else if (dialogResult == DialogResult.Cancel)
+            {
+                return "Cancel";
+            }
+
+            return "No";
         }
+
+        
     }
 }

@@ -41,5 +41,12 @@ namespace NotepadForm
 
             return null;
         }
+
+        internal DialogResult saveBeforeNewDialog()
+        {
+            string MessageBoxText = "If you don't save file before opening a new all changed will be lost. Do you want to save file?";
+            string caption = "Save file?";
+            return MessageBox.Show(MessageBoxText, caption, MessageBoxButtons.YesNoCancel);
+        }
     }
 }
