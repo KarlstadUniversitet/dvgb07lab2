@@ -123,7 +123,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form_notepad";
             this.Text = "Antons Notepad";
-            this.Load += new System.EventHandler(this.Form_notepad_Load);
             this.menuStrip_File.ResumeLayout(false);
             this.menuStrip_File.PerformLayout();
             this.ResumeLayout(false);

@@ -21,6 +21,11 @@ namespace NotepadForm
             InitializeComponent();
         }
 
+        /*
+         * If the textbox was changed there is first of a check if a '*'-sign is already showing. 
+         * If not a '*'-sign is added to the form-title. And textChanged variable in Notepad_File_Operator
+         * is changed to true. 
+         * <returns></returns> */
         private void textbox_filecontent_TextChanged(object sender, EventArgs e)
         {
             char lastChar = this.Text[this.Text.Length-1];
@@ -31,18 +36,26 @@ namespace NotepadForm
             }
         }
 
+        /*
+         * Calles the function newFile in Notepad_File_Operator
+         * <returns></returns> */
         private void newToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
             nfo.newFile(this, textbox_filecontent);
         }
 
-
+        /*
+         * Calles the function openFile in Notepad_File_Operator
+         * <returns></returns> */
         private void openToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
             nfo.openFile(this, textbox_filecontent);
 
         }
 
+        /*
+         * Checks if a file is opened. If so the saveFIleAs function is called in Notepad_File_Operator. 
+         * <returns></returns> */
         private void saveAsToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
             if (nfo.isFileOpen)
@@ -52,6 +65,9 @@ namespace NotepadForm
             
         }
 
+        /*
+         * Checks if a file is opened. If so the saveFile function is called in Notepad_File_Operator 
+         * <returns></returns> */
         private void saveToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
             if (nfo.isFileOpen)
@@ -60,16 +76,12 @@ namespace NotepadForm
             }
         }
 
-
+        /*
+         * calles the function closeFile in Notepad_File_Operator
+         * <returns></returns> */
         private void closeToolStripMenuItem_Clicked(object sender, System.EventArgs e)
         {
             nfo.closeFile(this, textbox_filecontent);
-        }
-
-
-        private void Form_notepad_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

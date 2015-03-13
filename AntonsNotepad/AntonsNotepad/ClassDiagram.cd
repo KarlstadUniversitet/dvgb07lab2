@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NotepadForm.Dialogs">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Dialogs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotepadForm.Form_notepad">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lAAUQgBAACBAAAAAAACAgAECABAAAIAAAgAAAAACAAA=</HashCode>
+      <FileName>Form_notepad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotepadForm.Notepad_File_Operator">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAQAAUAEAAAIRAEAAIAAA=</HashCode>
+      <FileName>Notepad_File_Operator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotepadForm.Program">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

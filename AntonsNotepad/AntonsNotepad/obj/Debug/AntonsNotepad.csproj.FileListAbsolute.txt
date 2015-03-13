@@ -40,8 +40,8 @@ C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\bin\De
 C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.exe
 C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.exe
 C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\bin\Debug\AntonsNotepad.pdb
-C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.csprojResolveAssemblyReference.cache
 C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\obj\Debug\NotepadForm.Form_notepad.resources
 C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\obj\Debug\NotepadForm.Properties.Resources.resources
 C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.csproj.GenerateResource.Cache
 C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.pdb
+C:\Users\Anton\Documents\workspace\dvgb07lab2\AntonsNotepad\AntonsNotepad\obj\Debug\AntonsNotepad.csprojResolveAssemblyReference.cache
